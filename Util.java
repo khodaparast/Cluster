@@ -54,7 +54,7 @@ public class Util {
         Map<String, Float> dissimilarityMap = new HashMap<>();
 
 
-        // dissimilarity(i,j)=(r+s/q+r+s )   ---> (i union j)-(i intersection j)/(i union j)
+        // dissimilarity(i,j) = (|i ∪ j| − |i ∩ j|) / |i ∪ j|
         for (int i = 0; i < allTags.length; i++) {
 
             Collection<String> tagQIdsi = tagsMap.get(allTags[i]);
