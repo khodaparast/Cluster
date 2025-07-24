@@ -31,7 +31,7 @@ public class Util {
 
     static {
         for (int i = 0; i < allTags.length; i++) {
-            tagSet.add(allTags[i]);
+            tagSet.add(allTags[i].trim());
         }
     }
 
@@ -43,8 +43,9 @@ public class Util {
         String[] tagName = resultTags.split(",");
 
         for (int i = 0; i < tagName.length; i++) {
-            if (tagSet.contains(tagName[i]))
-                tagQuestionsMap.put(tagName[i], id);
+            String tag = tagName[i].trim();
+            if (tagSet.contains(tag))
+                tagQuestionsMap.put(tag, id);
         }
     }
 
